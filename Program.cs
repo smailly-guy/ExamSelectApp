@@ -44,7 +44,7 @@ class Program
             .Where(u => u.FullName.ToLower().Contains(search)
                      || u.Email.ToLower().Contains(search)
                      || u.Phone.Contains(search))
-            .Select(u => new { u.Id, u.FullName, u.Email }) // граємося з Select
+            .Select(u => new { u.Id, u.FullName, u.Email }) 
             .ToList();
 
         sw.Stop();
@@ -63,3 +63,4 @@ class Program
         Console.WriteLine($"\nЧас пошуку: {sw.ElapsedMilliseconds} мс");
     }
 }
+
